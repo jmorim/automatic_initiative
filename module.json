@@ -1,7 +1,7 @@
 {
-  "title": "module-name",
+  "title": "Automatic Initiative",
   "description": "desc",
-  "id": "module-id",
+  "id": "automatic-initiative",
   "version": "1.0",
   "authors": [
     {
@@ -55,8 +55,8 @@
     "styles/module.css"
   ],
   "packs": [],
-  "url": "https://github.com/theripper93/module-id",
-  "manifest": "https://github.com/theripper93/module-id/releases/latest/download/module.json",
+  "url": "https://github.com/theripper93/automatic-initiative",
+  "manifest": "https://github.com/theripper93/automatic-initiative/releases/latest/download/module.json",
   "download": "",
   "relationships": {
     "requires": [
@@ -68,7 +68,7 @@
     ]
   },
   "compatibility": {
-    "minimum": "12",
-    "verified": "12"
+    "minimum": "11",
+    "verified": "11"
   }
 }
