@@ -2,12 +2,12 @@
   "title": "Automatic Initiative",
   "description": "desc",
   "id": "automatic-initiative",
-  "version": "1.0",
+  "version": "1.01",
   "authors": [
     {
-      "name": "theripper93",
-      "email": "tsplab@gmail.com",
-      "url": "https://www.patreon.com/theripper93"
+      "name": "morimoto",
+      "email": "jmorim@mit.edu",
+      "url": "https://www.ko-fi.com/profmoto"
     }
   ],
   "languages": [
@@ -55,8 +55,8 @@
     "styles/module.css"
   ],
   "packs": [],
-  "url": "https://github.com/theripper93/automatic-initiative",
-  "manifest": "https://github.com/theripper93/automatic-initiative/releases/latest/download/module.json",
+  "url": "https://github.com/jmorim/automatic-initiative",
+  "manifest": "https://github.com/jmorim/automatic-initiative/releases/latest/download/module.json",
   "download": "",
   "relationships": {
     "requires": [

@@ -6,7 +6,11 @@ export const MODULE_ID = "automatic-initiative";
 Hooks.on("init", () => {
     initConfig();
     registerSettings();
-    console.log('automatic-initiative | pee pee poo poo')
+    console.log('automatic-initiative | initialized poopoopeepee')
+});
+
+Hooks.once('devModeReady', ({ registerPackageDebugFlag }) => {
+    registerPackageDebugFlag(MODULE_ID)
 });
 
 Hooks.on('createCombatant', async (combatant) => {
@@ -27,32 +31,33 @@ Hooks.on('createCombatant', async (combatant) => {
             combatantId: combatant.id
         })
 
-//            Dialog.prompt({
-//                title: "roll initiative",
-//                content: `<p>we don't got all day</p>`,
-//                label: 'Roll',
-//                callback: () => combatant.rollInitiative(),
-//                rejectClose:false
-//            })
+            Dialog.prompt({
+                title: "roll initiative",
+                content: `<p>we don't got all day</p>`,
+                label: 'Roll',
+                callback: () => combatant.rollInitiative(),
+                rejectClose:false
+            })
     }
 })
 
-Hooks.once('read', () => {
-    game.socket.on(`module.${MODULE_ID}`, data => {
-        if (game.user.id === data.userId) {
-            const combatant = game.combat.combatants.get(data.combatantId);
-            if (!combatant.initiative) {
-                Dialog.prompt({
-                    title: 'roll initiative',
-                    content:`<p>we don't got all day</p>`,
-                    label: 'roll',
-                    callback: () => combatant.rollInitiative(),
-                    rejectClose: false
-                })
-            }
-        }
-    })
-})
+//Hooks.once('read', () => {
+//    game.socket.on(`module.${MODULE_ID}`, data => {
+//        if (game.user.id === data.userId) {
+//            const combatant = game.combat.combatants.get(data.combatantId);
+//            if (!combatant.initiative) {
+//                console.log('combatant doesnt have initiative')
+//                Dialog.prompt({
+//                    title: 'roll initiative',
+//                    content:`<p>we don't got all day</p>`,
+//                    label: 'roll',
+//                    callback: () => combatant.rollInitiative(),
+//                    rejectClose: false
+//                })
+//            }
+//        }
+//    })
+//})
 
 //Hooks.on('combatStart', async (combat) => {
 //    console.log('automatic initiative | createCombatant hook pee pee')
