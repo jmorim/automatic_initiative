@@ -124,7 +124,7 @@ jobs:
             `# The name of the output file`      \
              ./${{github.repository}}-${{github.event.release.tag.name}}.zip                        \
             `# The files that will be included.` \
-            ./dist
+            dist/
             `#module.json                          \ `
             `#README.md                            \ `
             `#LICENSE                              \ `
