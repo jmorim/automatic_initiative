@@ -122,7 +122,7 @@ jobs:
             `# Options`                          \
             --recurse-paths                      \
             `# The name of the output file`      \
-             ./${{github.repository}}-${{github.event.release.tag.name}}.zip                        \
+             ./${{github.repository}}-${{github.event.release.tag_name}}.zip                        \
             `# The files that will be included.` \
             dist/
             `#module.json                          \ `
