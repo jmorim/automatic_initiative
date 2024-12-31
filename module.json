@@ -1,8 +1,8 @@
 {
   "id": "automatic-initiative-2",
   "title": "Automatic Initiative",
-  "description": "",
-  "version": "0.0.1",
+  "description": "When tokens are added to combat, automatically rolls initiative for NPCs and prompts players to roll initiative.",
+  "version": "1.0.0",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
@@ -12,9 +12,8 @@
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "moto",
+      "url": "https://github.com/jmorim"
     }
   ],
   "relationships": {
@@ -38,9 +37,9 @@
       "path": "languages/en.json"
     }
   ],
-  "url": "#{URL}#",
-  "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",
+  "url": "https://github.com/jmorim/automatic_initiative",
+  "manifest": "https://raw.githubusercontent.com/jmorim/automatic_initiative/refs/heads/master/module.json",
+  "download": "",
   "license": "LICENSE",
   "readme": "README.md",
   "media": [

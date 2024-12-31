@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-const MODULE_ID = 'automatic-initiative-2';
+const MODULE_ID = 'automatic-initiative';
 const DIST_DIR = path.resolve(__dirname, 'dist');
 const ZIP_NAME = `${MODULE_ID}.zip`;
 const ZIP_PATH = path.resolve(__dirname, ZIP_NAME);
