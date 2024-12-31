@@ -1,8 +1,8 @@
 {
-  "id": "automatic-initiative-2",
+  "id": "automatic-initiative",
   "title": "Automatic Initiative",
   "description": "When tokens are added to combat, automatically rolls initiative for NPCs and prompts players to roll initiative.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {

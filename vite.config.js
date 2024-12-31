@@ -26,7 +26,11 @@ export default defineConfig({
   },
   plugins: [
     copy({
-      targets: [{ src: 'module.json', dest: 'dist'}],
+      targets: [
+        { src: 'module.json', dest: 'dist'},
+        { src: 'styles', dest: 'dist'},
+        { src: 'languages', dest: 'dist'}
+      ],
       hook: 'writeBundle',
     }),
   ],
