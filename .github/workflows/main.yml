@@ -123,16 +123,14 @@ jobs:
         run: |
           # Note that `zip` will only emit warnings when a file or directory
           # doesn't exist, it will not fail.
+          cd dist && \
           zip                                    \
             `# Options`                          \
             --recurse-paths                      \
             `# The name of the output file`      \
              ./${{github.event.repository.name}}-${{github.event.release.tag_name}}.zip\
             `# The files that will be included.` \
-            dist/assets \
-            dist/languages \
-            dist/styles \
-            dist/module.json
+            .
           # Don't forget to add a backslash at the end of the line for any
           # additional files or directories!
 
