@@ -102,6 +102,14 @@ jobs:
           MANIFEST: ${{ env.latest_manifest_url }}
           DOWNLOAD: ${{ env.release_module_url }}
 
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install vite
+        run: bun install vite
+
+      - name: Vite build
+        run: bun vite build
 
       # Create a "module.zip" archive containing all the module's required files.
       # If you have other directories or files that will need to be added to
