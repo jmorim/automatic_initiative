@@ -108,8 +108,13 @@ jobs:
       - name: Install vite
         run: bun install vite
 
+      - name: Update Version
+        shell: bash
+        run: echo "::set-output name=version::$(bun ./.github/workflows/set-version.js ${{github.ref}})"
+
       - name: Vite build
         run: bun vite build
+
 
       # Create a "module.zip" archive containing all the module's required files.
       # If you have other directories or files that will need to be added to
