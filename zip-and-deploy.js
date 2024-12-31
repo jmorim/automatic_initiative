@@ -28,6 +28,12 @@ const zipDirectory = (source, out) => {
     console.log('creating ZIP archive ... ');
     await zipDirectory(DIST_DIR, ZIP_PATH);
     console.log(`ZIP archive created at ${ZIP_PATH}`);
+
+    console.log('Adding to Git repo ... ');
+    execSync(`git add .`);
+    execSync(`git commit -m "chore: update source for release"`);
+    execSync('git push');
+    console.log('Committed and pushed to Git repo');
   } catch (error) {
     console.error('Error during build: ', error);
   }

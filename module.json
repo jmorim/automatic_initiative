@@ -39,7 +39,7 @@
   ],
   "url": "https://github.com/jmorim/automatic_initiative",
   "manifest": "https://raw.githubusercontent.com/jmorim/automatic_initiative/refs/heads/master/module.json",
-  "download": "",
+  "download": "https://github.com/jmorim/automatic_initiative/releases/download/v1.0.0/automatic-initiative.zip",
   "license": "LICENSE",
   "readme": "README.md",
   "media": [

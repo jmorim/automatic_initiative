@@ -1,9 +1,13 @@
 {
   "name": "automatic-initiative-2",
   "module": "index.ts",
+  "release": {
+    "branches": ["master", "next"]
+  },
   "scripts": {
     "build": "vite build",
-    "archive": "bun zip-and-deploy.js"
+    "deploy": "bun zip-and-deploy.js",
+    "release": "bun run build && bun run deploy"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -12,6 +16,7 @@
   },
   "type": "module",
   "dependencies": {
-    "archiver": "^7.0.1"
+    "archiver": "^7.0.1",
+    "semantic-release": "^24.2.0"
   }
 }
