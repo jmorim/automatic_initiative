@@ -129,7 +129,7 @@ jobs:
             `# The name of the output file`      \
              ./${{github.event.repository.name}}-${{github.event.release.tag_name}}.zip\
             `# The files that will be included.` \
-            dist/
+            dist/*
           # Don't forget to add a backslash at the end of the line for any
           # additional files or directories!
 

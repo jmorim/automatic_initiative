@@ -5,7 +5,7 @@ const manifest = JSON.parse(fs.readFileSync('module.json', 'utf8'));
 const tagVersion = process.argv[2].split('/').slice(-1)[0];
 const repo = process.argv[3];
 console.log('repo: ', repo);
-const repoName = repo.split('/')[0];
+const repoName = repo.split('/')[1];
 console.log('repoName: ', repoName);
 if (!tagVersion || !tagVersion.startsWith('v')) {
   console.error(`Invalid version specified: ${tagVersion}`);
