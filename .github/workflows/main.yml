@@ -110,7 +110,7 @@ jobs:
 
       - name: Update Version
         shell: bash
-        run: echo "::set-output name=version::$(bun ./.github/workflows/set-version.js ${{github.ref}})"
+        run: echo "::set-output name=version::$(bun ./.github/workflows/set-version.js ${{github.ref}} ${{github.event.repository}})"
 
       - name: Vite build
         run: bun vite build
