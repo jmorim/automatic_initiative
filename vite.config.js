@@ -1,8 +1,8 @@
 import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'vite';
-import { execSync } from 'child_process';
-
-execSync('bun run updateManifestVersion.js');
+//import { execSync } from 'child_process';
+//
+//execSync('bun run updateManifestVersion.js');
 
 export default defineConfig({
   server: {
