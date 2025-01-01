@@ -3,11 +3,15 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const manifestPath = path.resolve('./module.json');
+const repo = process.argv[2];
+const repoName = repo.split('/')[1];
 
 const gitTag = execSync('git describe --tags --abbrev=0', { encoding: 'utf8' }).trim();
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
 
 manifest.version = gitTag;
+manifest.manifest = `https://raw.githubusercontent.com/${repo}/${gitTag}/module.json`;
+manifest.download = `https://github.com/${repo}/releases/download/${gitTag}/${repoName}-${gitTag}.zip`;
 
 writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
 console.log(`Updated version in ${path.basename(manifestPath)} to ${gitTag}`);
