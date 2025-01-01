@@ -12,7 +12,7 @@ if (!tagVersion || !tagVersion.startsWith('v')) {
   process.exitCode = 1;
 } else {
   manifest.version = tagVersion.substring(1);
-  manifest.manifest = `https://raw.githubusercontent.com/${repo}/${tagVersion}/module.json`
+  manifest.manifest = `https://github.com/${repo}/${tagVersion}/module.json`
   manifest.download = `https://github.com/${repo}/releases/download/${tagVersion}/${repoName}-${tagVersion}.zip`
   fs.writeFileSync('module.json', JSON.stringify(manifest, null, 2));
   console.log(tagVersion);
