@@ -1,19 +1,4 @@
 const MODULE_ID = 'automatic-initiative'
-let socket;
-
-Hooks.once('init', async () => {
-  console.log('poo poo pee pee')
-});
-
-Hooks.once('socketlib.ready', () => {
-  socket = socketlib.registerModule('automatic-initiative-2');
-  socket.register('rollNPC', rollNPC)
-  socket.register('rollPlayers', rollPlayers)
-});
-
-Hooks.once('ready', async () => {
-  console.log('pee pee poo poo')
-});
 
 const dialogGenerator = async (combatant) => {
   console.log('combatant at dialogGenerator: ', combatant)
