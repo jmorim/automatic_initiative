@@ -3,7 +3,7 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const manifestPath = path.resolve('./module.json');
-const repo = process.argv[2];
+const repo = import.meta.env.VITE_REPO;
 const repoName = repo.split('/')[1];
 
 const gitTag = execSync('git describe --tags --abbrev=0', { encoding: 'utf8' }).trim();

@@ -108,9 +108,9 @@ jobs:
       - name: Install vite
         run: bun install vite
 
-      - name: Update Version
-        shell: bash
-        run: echo "::set-output name=version::$(bun ./.github/workflows/set-version.js ${{github.ref}} ${{github.repository}})"
+#      - name: Update Version
+#        shell: bash
+#        run: echo "::set-output name=version::$(bun ./.github/workflows/set-version.js ${{github.ref}} ${{github.repository}})"
 
       - name: Vite build
         run: bun vite build
