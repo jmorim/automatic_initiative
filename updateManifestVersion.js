@@ -10,7 +10,7 @@ const gitTag = execSync('git describe --tags --abbrev=0', { encoding: 'utf8' }).
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
 
 manifest.version = gitTag.substring(1);
-manifest.manifest = `https://github.com/${repo}/${gitTag}/module.json`;
+manifest.manifest = `https://github.com/${repo}/releases/latest/download/module.json`;
 manifest.download = `https://github.com/${repo}/releases/download/${gitTag}/${repoName}-${gitTag}.zip`;
 
 writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
