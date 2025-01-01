@@ -1,4 +1,4 @@
-//import copy from 'rollup-plugin-copy';
+import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'vite';
 import { execSync } from 'child_process';
 import { dirname } from 'path';
@@ -33,23 +33,23 @@ export default defineConfig({
 //      formats: ['es'],
 //      fileName: 'automatic-initiative'
 //    },
-//    rollupOptions: {
-//      input: 'scripts/module.js',
-//      output: {
-//        dir: 'dist/',
-////        file: 'dist/scripts/module.js',
-//        format: 'es',
-//      }
-//    }
+    rollupOptions: {
+      input: 'scripts/module.js',
+      output: {
+        dir: 'dist/',
+//        file: 'dist/scripts/module.js',
+        format: 'es',
+      }
+    }
   },
-//  plugins: [
-//    copy({
-//      targets: [
-//        { src: 'module.json', dest: 'dist'},
-//        { src: 'styles/', dest: 'dist'},
-//        { src: 'languages/', dest: 'dist'}
-//      ],
-//      hook: 'writeBundle',
-//    }),
-//  ],
+  plugins: [
+    copy({
+      targets: [
+        { src: 'module.json', dest: 'dist'},
+        { src: 'styles/', dest: 'dist'},
+        { src: 'languages/', dest: 'dist'}
+      ],
+      hook: 'writeBundle',
+    }),
+  ],
 });
