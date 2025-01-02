@@ -14,7 +14,7 @@ manifest.manifest = `https://github.com/${repo}/releases/latest/download/module.
 manifest.download = `https://github.com/${repo}/releases/download/${gitTag}/${repoName}-${gitTag}.zip`;
 
 manifest.esmodules = ['./index.js'];
-manifest.scripts = ['./lib/lib.js'];
+//manifest.scripts = ['./lib/lib.js'];
 manifest.styles = ['./styles/module.css'];
 
 writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
