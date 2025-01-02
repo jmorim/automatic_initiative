@@ -13,5 +13,9 @@ manifest.version = gitTag.substring(1);
 manifest.manifest = `https://github.com/${repo}/releases/latest/download/module.json`;
 manifest.download = `https://github.com/${repo}/releases/download/${gitTag}/${repoName}-${gitTag}.zip`;
 
+manifest.esmodules = ['./index.js'];
+manifest.scripts = ['./lib/lib.js'];
+manifest.styles = ['./styles/module.css'];
+
 writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
 console.log(`Updated version in ${path.basename(manifestPath)} to ${gitTag}`);

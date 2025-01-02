@@ -5,7 +5,7 @@ import { dirname } from 'path';
 
 const __dirname = dirname(__filename);
 
-execSync(`bun run updateManifestVersion.js`);
+execSync(`bun run updateManifest.js`);
 
 export default defineConfig({
   server: {
