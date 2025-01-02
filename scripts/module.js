@@ -9,18 +9,9 @@ const dialogGenerator = async (combatant) => {
       roll: {
         label: 'roll',
         callback: async () => {
-          console.log('combatant at callback: ', combatant);
-          const result = await combatant.rollInitiative();
-          console.log('result: ', result);
-          console.log(result.id, ' rolled ', result.initiative);
-          console.log('combatant getInitiativeRoll: ', result.getInitiativeRoll())
-          result.getInitiativeRoll().toMessage({
-            speaker: { alias: result.name}
-          })
-//          result.toMessage({
-//            speaker: { alias: combatant.name },
-//            content: `rolled ${result.initiative}`
-//          })
+          const roll = await combatant.getInitiativeRoll();
+          await roll.toMessage();
+          await game.combat.setInitiative(combatant.id, roll.total);
         },
       },
       cancel: {

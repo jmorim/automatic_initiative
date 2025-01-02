@@ -2,7 +2,7 @@
   "id": "automatic-initiative",
   "title": "Automatic Initiative",
   "description": "When tokens are added to combat, automatically rolls initiative for NPCs and prompts players to roll initiative.",
-  "version": "0.0.992",
+  "version": "0.0.993",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
@@ -36,7 +36,7 @@
   ],
   "url": "https://github.com/jmorim/automatic_initiative",
   "manifest": "https://github.com/jmorim/automatic_initiative/releases/latest/download/module.json",
-  "download": "https://github.com/jmorim/automatic_initiative/releases/download/v0.0.992/automatic_initiative-v0.0.992.zip",
+  "download": "https://github.com/jmorim/automatic_initiative/releases/download/v0.0.993/automatic_initiative-v0.0.993.zip",
   "license": "LICENSE",
   "readme": "README.md",
   "media": [
