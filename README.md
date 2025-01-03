@@ -1,6 +1,6 @@
-# Automatic Initiative
+# Foundry VTT: Automatic Initiative
 
-When tokens are added to combat, automatically rolls initiative for NPCs and
-prompts players to roll initiative.
+A module that automatically rolls initiative for NPCs and
+prompts players to roll initiative when tokens are added to combat.
 
 ## Changelog
